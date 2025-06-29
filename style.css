@@ -1,0 +1,327 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  background: #18141f;
+  color: #f8f6fa;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+.special-title {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+  color: #fff6fa;
+  text-shadow: 0 2px 12px #0008, 0 1px 0 #a18cd1;
+}
+
+.headline {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #ffe0f7;
+  text-shadow: 0 2px 16px #a18cd1cc, 0 1px 0 #0008;
+  margin-bottom: 0.5em;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #e09ec3;
+  margin: 2em 0 1em 0;
+  text-align: center;
+  text-shadow: 0 2px 12px #0008;
+}
+
+.special-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2rem;
+  color: #ffe0f7;
+  text-shadow: 0 2px 12px #a18cd1cc, 0 1px 0 #0008;
+}
+
+.sub-message,
+.message-block,
+.closing-message {
+  color: #f8f6fa;
+  text-shadow: 0 2px 8px #000a;
+}
+
+/* === Hero Section === */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #18141f 0%, #2d223a 100%);
+  overflow: hidden;
+}
+#bg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2em 1em;
+}
+.jane-img-wrapper {
+  margin: 2em auto 0 auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 32px 0 #e09ec3aa;
+  border: 6px solid #fff6fa;
+  background: #fff6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jane-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.sub-message {
+  font-size: 1.2rem;
+  margin: 0 auto 1.5em auto;
+  max-width: 600px;
+}
+
+/* === Gallery Section === */
+#gallery {
+  background: linear-gradient(135deg, #2d223a 0%, #18141f 100%);
+  padding: 3em 1em 2em 1em;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2em;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.gallery-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px #e09ec355;
+  background: #231b2e;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff6fa;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.gallery-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 32px #e09ec3aa;
+}
+.video-thumb .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  color: #fff;
+  background: #e09ec3cc;
+  border-radius: 50%;
+  padding: 0.3em 0.4em;
+  pointer-events: none;
+  box-shadow: 0 2px 8px #a18cd1aa;
+}
+
+/* === Lightbox === */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(60, 40, 80, 0.85);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #e09ec3cc;
+  background: #fff6fa;
+}
+.lightbox .close {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  color: #fff;
+  font-size: 2.5em;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* === Personal Message Section === */
+#personal-message {
+  background: linear-gradient(135deg, #18141f 0%, #2d223a 100%);
+  padding: 3em 1em 2em 1em;
+  text-align: center;
+}
+.message-block {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  background: #231b2e;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #e09ec355;
+  max-width: 700px;
+  margin: 1.5em auto 2em auto;
+  padding: 2em 1.5em;
+  line-height: 1.7;
+  color: #fff6fa;
+  text-shadow: 0 2px 8px #000a;
+}
+.music-btn {
+  background: #e09ec3;
+  color: #fff6fa;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #e09ec355;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 1em;
+  text-shadow: 0 2px 8px #000a;
+}
+.music-btn:hover {
+  background: #a18cd1;
+  transform: scale(1.05);
+}
+
+/* === Closing Section === */
+#closing {
+  background: linear-gradient(135deg, #18141f 0%, #2d223a 100%);
+  padding: 3em 1em 4em 1em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.closing-message {
+  font-size: 1.3rem;
+  margin-bottom: 2em;
+  font-family: "Playfair Display", serif;
+  background: #231b2e;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #e09ec355;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 1.5em;
+  color: #fff6fa;
+  text-shadow: 0 2px 8px #000a;
+}
+#fireworks {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 180px;
+  pointer-events: none;
+  z-index: 1;
+}
+.birthday-video-btn {
+  background: linear-gradient(90deg, #e09ec3 0%, #a18cd1 100%);
+  color: #fff6fa;
+  border: none;
+  border-radius: 32px;
+  padding: 1em 2.5em;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 16px #e09ec355;
+  margin-top: 2em;
+  z-index: 2;
+  position: relative;
+  transition: background 0.2s, transform 0.2s;
+}
+.birthday-video-btn:hover {
+  background: linear-gradient(90deg, #a18cd1 0%, #e09ec3 100%);
+  transform: scale(1.05);
+}
+
+/* === Responsive Design === */
+@media (max-width: 700px) {
+  .headline {
+    font-size: 2.1rem;
+  }
+  .section-title,
+  .special-title {
+    font-size: 1.3rem;
+  }
+  .jane-img-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .closing-message {
+    font-size: 1rem;
+    padding: 1.2em 0.7em;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff6fa 60%, #e09ec3 100%);
+  opacity: 0.85;
+  box-shadow: 0 0 16px 6px #fff6fa99;
+  animation: sparkle-fade 1.2s linear forwards;
+  z-index: 3;
+}
+@keyframes sparkle-fade {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.7);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
