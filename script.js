@@ -112,6 +112,23 @@ const musicBtn = document.getElementById('music-toggle');
 const bgMusic = document.getElementById('bg-music');
 if (musicBtn && bgMusic) {
   let playing = false;
+
+  // ---
+  // Attempt to autoplay background music on page load.
+  // Note: Most browsers block autoplay of unmuted audio until the user interacts with the page.
+  // If autoplay is blocked, the button will show 'Play Music' and user must click to start music.
+  // ---
+  window.addEventListener('DOMContentLoaded', () => {
+    bgMusic.play().then(() => {
+      playing = true;
+      musicBtn.innerHTML = '<i class="fas fa-music"></i> Pause Music';
+    }).catch(() => {
+      // Autoplay was blocked; show Play Music
+      playing = false;
+      musicBtn.innerHTML = '<i class="fas fa-music"></i> Play Music';
+    });
+  });
+
   musicBtn.addEventListener('click', () => {
     if (!playing) {
       bgMusic.play();

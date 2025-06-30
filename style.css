@@ -220,6 +220,30 @@ h2,
   transform: scale(1.05);
 }
 
+.download-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #e09ec3 0%, #a18cd1 100%);
+  color: #fff6fa;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.8em 2.2em;
+  border-radius: 28px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px #e09ec355;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-shadow: 0 2px 8px #000a;
+  letter-spacing: 0.5px;
+}
+.download-btn:hover {
+  background: linear-gradient(90deg, #a18cd1 0%, #e09ec3 100%);
+  color: #ffe0f7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 24px #a18cd1aa;
+}
+
 /* === Closing Section === */
 #closing {
   background: linear-gradient(135deg, #18141f 0%, #2d223a 100%);
